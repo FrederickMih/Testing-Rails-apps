@@ -46,6 +46,11 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'rspec', '~> 3.12'
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+  gem 'rspec-support', '~> 3.12', '>= 3.12.1'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
 end
