@@ -4,6 +4,5 @@ FactoryBot.define do
     first_name { "Mih" }
     last_name { "Fred" }
     phone_number { "111-222-333-444" }
-    group
   end
 end
