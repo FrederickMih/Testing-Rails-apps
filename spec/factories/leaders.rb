@@ -3,6 +3,6 @@ FactoryBot.define do
     email { "fred@gmail.com" }
     first_name { "Mih" }
     last_name { "Fred" }
-    phone_number { "111-222-333-444" }
+    phone_number { "324-888-7035" }
   end
 end

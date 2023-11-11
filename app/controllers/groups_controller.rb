@@ -14,6 +14,7 @@ class GroupsController < ApplicationController
     @group = Group.new group_params
     if @group.save
       flash[:notice] = "Group successfully created"
+      redirect_to groups_path
     else
       render :new
     end

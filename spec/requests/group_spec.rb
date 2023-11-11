@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Groups", type: :request do
-  let(:group) { FactoryBot.build(:group) }
+  let(:group) { FactoryBot.create(:group) }
 
   context "Get /index" do
     it "should render group index page" do
@@ -28,13 +28,13 @@ RSpec.describe "Groups", type: :request do
     it "should create a group with valid attributes" do
       post '/groups', params: {group: FactoryBot.attributes_for(:group)}
       expect(response).to redirect_to groups_path
-      expect(flash[:notice]). to eq "Group successfully created"
+      expect(flash[:notice]).to eq "Group successfully created"
     end
 
     it "should not create a group with invalid attributes" do
       post '/groups', params: {group: FactoryBot.attributes_for(:group, name: nil)}
-      expect(response).to redirect_to :new
-      expect(flash[:notice]). to eq nil
+      expect(response).to render_template :new
+      expect(flash[:notice]).to eq nil
     end
   end
 
@@ -46,7 +46,7 @@ RSpec.describe "Groups", type: :request do
     end
 
     it "should not update a group with invalid attributes" do
-      put "/groups/#{group.id}", params: {group: FactoryBot.attributes_for(:group, size = nil)}
+      put "/groups/#{group.id}", params: {group: FactoryBot.attributes_for(:group, size: nil)}
       expect(response).to render_template :edit
       expect(flash[:notice]).to eql nil
     end

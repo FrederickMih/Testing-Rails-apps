@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :group do
-    description { "Students connecting group" }
+    description { "Group to connect people" }
     group_type { "College" }
     name { "GCU" }
     size { 8 }
