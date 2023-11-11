@@ -5,6 +5,7 @@ class CreateGroups < ActiveRecord::Migration[7.1]
       t.string :group_type
       t.string :name
       t.string :size
+      t.references :leader, null: true, foreign_key: true
 
       t.timestamps
     end

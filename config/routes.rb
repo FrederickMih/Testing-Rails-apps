@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  root "groups#index"
+# root "groups#index"
   
-  resources :groups, only: [:index, :new, :create] do
-    resources :leaders, only: [:index, :new, :show, :create]
-  end
+resources :leaders
+resources :groups
   
 end

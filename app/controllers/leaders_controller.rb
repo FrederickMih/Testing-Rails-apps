@@ -1,5 +1,8 @@
 class LeadersController < ApplicationController
+before_action :leader, only: [:edit, :update, :destroy]
+
   def index
+    
   end
 
   def new

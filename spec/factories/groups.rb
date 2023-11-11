@@ -3,7 +3,7 @@ FactoryBot.define do
     description { "Students connecting group" }
     group_type { "College" }
     name { "GCU" }
-    size { 7 }
-    leader
+    size { 8 }
+    leader 
   end
 end

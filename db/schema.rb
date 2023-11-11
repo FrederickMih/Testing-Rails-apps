@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_09_222201) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_10_124635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,9 +19,9 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_09_222201) do
     t.string "group_type"
     t.string "name"
     t.string "size"
+    t.bigint "leader_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "leader_id", null: false
     t.index ["leader_id"], name: "index_groups_on_leader_id"
   end
 
